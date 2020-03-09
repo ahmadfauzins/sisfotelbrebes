@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "259689582586",
+    "firebase_url": "https://sisfotelbrebes.firebaseio.com",
+    "project_id": "sisfotelbrebes",
+    "storage_bucket": "sisfotelbrebes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259689582586:android:327be3053b3cde1af29e43",
+        "android_client_info": {
+          "package_name": "com.fauzi.sisfotelbrebes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "259689582586-65g4lmb2b2v716c916mmq5vg87pti7ct.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fauzi.sisfotelbrebes",
+            "certificate_hash": "237cd29dfc16a750e37bbbb93a56a3ecedacc710"
+          }
+        },
+        {
+          "client_id": "259689582586-lk9oam1bsh0608qqu8khchee1ets1b2m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxiaeTtMTPgPY3EpZO1I6c-qB1qXK03Hg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "259689582586-lk9oam1bsh0608qqu8khchee1ets1b2m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

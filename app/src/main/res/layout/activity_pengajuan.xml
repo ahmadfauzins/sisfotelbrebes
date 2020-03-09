@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_top"
+    tools:context=".Pengajuan">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="933dp">
+
+            <ImageView
+                android:id="@+id/kembali"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_width="42dp"
+                android:layout_height="29dp"
+                android:src="@drawable/back">
+            </ImageView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="400dp"
+                android:layout_marginTop="-30dp"
+                android:src="@drawable/page" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="225dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitoo"
+                    android:text="Pengajuan Data"
+                    android:textColor="#ffffff"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-5dp"
+                    android:fontFamily="@font/nunitoo"
+                    android:text="Menara Telekomunikasi Bersama Kab.Brebes"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+
+
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardHeader1"
+                android:layout_width="match_parent"
+                android:layout_height="545dp"
+                android:layout_marginTop="300dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="7dp"
+                app:cardMaxElevation="@dimen/cardview_default_elevation">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp">
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="*Isi Data Dengan Sesuai &amp; Benar"
+                    android:textColor="@color/endcolor"
+                    android:textSize="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto"
+                        android:hint="Nama Penyelenggara Telekomunikasi"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/activity_vertical_margin"
+                        android:textColor="@color/teksindex"
+                        android:textColorHint="@color/teksmenu" />
+
+                    <EditText
+                        android:id="@+id/nama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto"
+                        android:hint="Nama Penanggung Jawab"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/activity_vertical_margin"
+                        android:textColor="@color/teksindex"
+                        android:textColorHint="@color/teksmenu" />
+
+                    <EditText
+                        android:id="@+id/alamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto"
+                        android:hint="Izin Penyelenggaraan Telekomunikasi"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/activity_vertical_margin"
+                        android:textColor="@color/teksindex"
+                        android:textColorHint="@color/teksmenu" />
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto"
+                        android:hint="Jenis Menara Telekomunikasi"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/activity_vertical_margin"
+                        android:textColor="@color/teksindex"
+                        android:textColorHint="@color/teksmenu" />
+
+                    <EditText
+                        android:id="@+id/lokasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto"
+                        android:hint="Lokasi Pendirian Menara"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/activity_vertical_margin"
+                        android:textColor="@color/teksindex"
+                        android:textColorHint="@color/teksmenu" />
+
+                    <EditText
+                        android:id="@+id/no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto"
+                        android:hint="Ketinggian Menara"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/activity_vertical_margin"
+                        android:textColor="@color/teksindex"
+                        android:textColorHint="@color/teksmenu" />
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto"
+                        android:hint="Nama Pemohon"
+                        android:padding="@dimen/activity_vertical_margin"
+                        android:textColor="@color/teksindex"
+                        android:textColorHint="@color/teksmenu" />
+
+                    <EditText
+                        android:id="@+id/repassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto"
+                        android:hint="Identitas Diri Pemohon"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/activity_vertical_margin"
+                        android:textColor="@color/teksindex"
+                        android:textColorHint="@color/teksmenu" />
+
+                    <Button
+                        android:id="@+id/btn_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_background"
+                        android:fontFamily="@font/nunito"
+                        android:text="Lanjutkan"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20dp" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

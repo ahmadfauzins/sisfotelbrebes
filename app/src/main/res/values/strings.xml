@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">SISFOTEL BREBES</string>
+    <string name="judul1">Aplikasi Pendaftaran</string>
+    <string name="judul2">Menara Telekomunikasi</string>
+    <string name="judul3">Kabupaten Brebes</string>
+    <string name="dinkom">dinkominfotik brebes</string>
+    <string name="menu">Layanan</string>
+    <string name="layanan">Menu Layanan Pengajuan Cek Status dll.</string>
+    <string name="berita">Informasi Berita Peninjauan Survei Pembangunan</string>
+    <string name="judulregister">Pendaftaran Akun</string>
+    <string name="register">Register</string>
+    <string name="welcome">Selamat Datang</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="repassword">Ulangi Password</string>
+    <string name="email">E-Mail</string>
+    <string name="nama">Nama Lengkap</string>
+    <string name="alamat">Alamat Lengkap</string>
+    <string name="telepon">No.Telepon</string>
+    <string name="belum">Belum Punya Akun?</string>
+    <string name="sudah">Sudah Punya Akun?</string>
+    <string name="reglog">Aplikasi Pendaftaran Menara Telekomunikasi</string>
+    <string name="status">Status Pengajuan</string>
+
+
+</resources>
