@@ -15,9 +15,10 @@
         android:layout_height="match_parent">
 
     <RelativeLayout
+        android:layout_marginTop="-5dp"
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:background="@drawable/atas"
+        android:background="@drawable/bg_atas"
         android:layout_height="250dp">
 
         <LinearLayout
@@ -99,8 +100,6 @@
             android:layout_height="wrap_content"/>
 
 
-
-
     </LinearLayout>
 
         <LinearLayout
@@ -131,7 +130,7 @@
                         android:layout_height="70dp">
 
                         <ImageView
-                            android:id="@+id/pengajuan"
+                            android:id="@+id/datadiri"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_marginLeft="8dp"
@@ -163,7 +162,7 @@
                         android:layout_height="70dp">
 
                         <ImageView
-                            android:id="@+id/status"
+                            android:id="@+id/pengajuan"
                             android:layout_width="47dp"
                             android:layout_height="48dp"
                             android:background="?attr/selectableItemBackgroundBorderless"
@@ -195,7 +194,7 @@
                         android:layout_height="70dp">
 
                         <ImageView
-                            android:id="@+id/cell"
+                            android:id="@+id/status"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:background="?attr/selectableItemBackgroundBorderless"
@@ -222,6 +221,8 @@
                     app:cardElevation="7dp">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
                         android:layout_width="70dp"
                         android:layout_height="70dp">
 
@@ -260,7 +261,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:fontFamily="@font/nunitoo"
-                        android:text="Pengajuan"
+                        android:text="@string/pengajuan"
                         android:textAlignment="center" />
 
                     <TextView
@@ -268,7 +269,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:fontFamily="@font/nunitoo"
-                        android:text="Status"
+                        android:text="@string/statuss"
                         android:textAlignment="center" />
 
                     <TextView
@@ -276,7 +277,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:fontFamily="@font/nunitoo"
-                        android:text="History"
+                        android:text="@string/tower"
                         android:textAlignment="center" />
 
                 </LinearLayout>
@@ -313,7 +314,7 @@
                     android:layout_height="70dp">
 
                     <ImageView
-                        android:id="@+id/pengaduan"
+                        android:id="@+id/lokasi"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:background="?attr/selectableItemBackgroundBorderless"

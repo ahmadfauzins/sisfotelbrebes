@@ -19,8 +19,50 @@
     <string name="telepon">No.Telepon</string>
     <string name="belum">Belum Punya Akun?</string>
     <string name="sudah">Sudah Punya Akun?</string>
+    <string name="sub">SUBKONTRAKTOR</string>
+    <string name="provider">PROVIDER</string>
     <string name="reglog">Aplikasi Pendaftaran Menara Telekomunikasi</string>
     <string name="status">Status Pengajuan</string>
+    <string name="title_activity_maps_map">Map</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="action_geolocate">Pick Place</string>
+    <string name="default_info_title">Default Location</string>
+    <string name="default_info_snippet">No places found, because location permission is disabled.</string>
+    <string name="login">Silahkan Login</string>
+    <string name="regis">Registrasi Sukses!</string>
+    <string name="sukses">Silahkan Cek E-Mail Anda\n untuk Pemberitahuan Akun anda Sudah Aktif.\n Info Hub. adminkominfotik@brebeskab.go.id </string>
+    <string name="karakter">KARAKTERISTIK</string>
+    <string name="titik">TITIK KOORDINAT</string>
+    <string name="lama">Lama Sewa</string>
+    <string name="pemilik">Pemilik Tanah</string>
+    <string name="berdiri">Tahun Berdiri</string>
+    <string name="lanjut">lanjutkan</string>
+    <string name="nosurat">No. Surat Permohonan</string>
+    <string name="ambilg">Ambil Gambar</string>
+    <string name="upload">upload</string>
+    <string name="upload1">1. Surat Permohonan Menara</string>
+    <string name="upload2">2. Surat Permohonan Desa</string>
+    <string name="ketupload1">*Perhatikan ! Selama Mengupload Berkas Tidak Boleh Keluar Aplikasi.\nLanjutkan Hingga Selesai</string>
+    <string name="msg_loading">Loading...</string>
+    <string name="uploadImages">Ambil Berkas Gambar</string>
+    <string name="syarat"><![CDATA[Syarat & Ketentuan]]></string>
+    <string name="ceksyarat">Persayaratan</string>
+    <string name="isisyarat">Data Pengajuan : (ISI FORM)\n - Rekomendasi Desa\n - Rekomendasi Kecamatan\n - Surat Persetujuan Warga\n
+        Data Kelengkapan Diri :\n - Akte Pendirian Perusahaan\n - Identitas Diri Pemohon</string>
+    <string name="tower">Cell</string>
+    <string name="pengajuan">Pengajuan</string>
+    <string name="statuss">Status</string>
+    <string name="cell">Data Menara</string>
+    <string name="ptsub">%s . </string>
+    <string name="alamatpt">, %s</string>
+    <string name="regul">Regulasi</string>
+    <string name="menara">Menara Telekomunikasi Bersama Kab.Brebes</string>
+    <string name="cekregul"><![CDATA[Hukum & Regulasi]]></string>
+    <string name="profil">Profil Data Diri</string>
+    <string name="lengkap">*Mohon Untuk Dilengkapi Terlebih dahulu sebelum melakukan Pengajuan</string>
+    <string name="simpan">SIMPAN</string>
+    <string name="cekbok">Saya Setuju dan Bertanggung Jawab pada Data diatas serta Mentaati Peraturan Menara Telekomunikasi Kab.Brebes</string>
 
 
 </resources>
+

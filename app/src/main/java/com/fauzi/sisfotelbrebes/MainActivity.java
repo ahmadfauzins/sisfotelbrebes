@@ -9,6 +9,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.fauzi.sisfotelbrebes.main.Cell;
+import com.fauzi.sisfotelbrebes.main.Maps;
+import com.fauzi.sisfotelbrebes.main.Pengajuan;
+import com.fauzi.sisfotelbrebes.main.Profil;
+import com.fauzi.sisfotelbrebes.main.Regulasi;
+import com.fauzi.sisfotelbrebes.main.Status;
+import com.fauzi.sisfotelbrebes.main.Syarat;
+import com.fauzi.sisfotelbrebes.main.UploadPDF;
+import com.fauzi.sisfotelbrebes.utility.PrefId;
+import com.fauzi.sisfotelbrebes.utility.PrefUtil;
+
 public class MainActivity extends AppCompatActivity {
 
     ImageView imPengajuan, imStatus, imCell, imHistory, imPengaduan, imSyarat, imRegulasi, imLogout;
@@ -17,11 +28,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        imPengajuan = findViewById(R.id.pengajuan);
-        imStatus = findViewById(R.id.status);
-        imCell = findViewById(R.id.cell);
+        imPengajuan = findViewById(R.id.datadiri);
+        imStatus = findViewById(R.id.pengajuan);
+        imCell = findViewById(R.id.status);
         imHistory = findViewById(R.id.history);
-        imPengaduan = findViewById(R.id.pengaduan);
+        imPengaduan = findViewById(R.id.lokasi);
         imSyarat = findViewById(R.id.syarat);
         imRegulasi = findViewById(R.id.regulasi);
         imLogout= findViewById(R.id.logout);
@@ -30,49 +41,49 @@ public class MainActivity extends AppCompatActivity {
         imPengajuan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,UploadPDF.class);
+                Intent intent = new Intent(MainActivity.this, Profil.class);
                 startActivity(intent);
             }
         });
         imStatus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Status.class);
+                Intent intent = new Intent(MainActivity.this, Pengajuan.class);
                 startActivity(intent);
             }
         });
         imCell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Maps.class);
+                Intent intent = new Intent(MainActivity.this, Status.class);
                 startActivity(intent);
             }
         });
         imHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Pengajuan.class);
+                Intent intent = new Intent(MainActivity.this, Cell.class);
                 startActivity(intent);
             }
         });
         imPengaduan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Pengajuan.class);
+                Intent intent = new Intent(MainActivity.this, Maps.class);
                 startActivity(intent);
             }
         });
         imSyarat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Pengajuan.class);
+                Intent intent = new Intent(MainActivity.this, Syarat.class);
                 startActivity(intent);
             }
         });
         imRegulasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Pengajuan.class);
+                Intent intent = new Intent(MainActivity.this, Regulasi.class);
                 startActivity(intent);
             }
         });
@@ -95,9 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 .setCancelable(false)
                 .setPositiveButton("Ya",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {
-                        Intent intent = new Intent(MainActivity.this,Login.class);
-                        startActivity(intent);
-                        finish();
+                        logout();
                     }
                 })
                 .setNegativeButton("Tidak",new DialogInterface.OnClickListener() {
@@ -111,5 +120,11 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
+    private void logout() {
+        PrefId.clear(this);
+        PrefUtil.clear(this);
+        startActivity(new Intent(getBaseContext(),Splash.class));
+        finish();
+    }
 }
 

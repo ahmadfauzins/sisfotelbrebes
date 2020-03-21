@@ -6,54 +6,51 @@ public class Pengguna {
 
     @SerializedName("id")
     private String id;
+    @SerializedName("username")
+    private String username;
     @SerializedName("nama")
     private String nama;
-    @SerializedName("nim")
-    private String nim;
-    @SerializedName("tempat_lahir")
-    private String tempat_lahir;
-    @SerializedName("tanggal_lahir")
-    private String tanggal_lahir;
+    @SerializedName("identitas")
+    private String identitas;
     @SerializedName("alamat")
     private String alamat;
-    @SerializedName("nama_ibu")
-    private String nama_ibu;
-    @SerializedName("nik")
-    private String nik;
+    @SerializedName("email")
+    private String email;
+    @SerializedName("no_hp")
+    private String no_hp;
+    @SerializedName("provider")
+    private String provider;
+    @SerializedName("nama_pt")
+    private String nama_pt;
+    @SerializedName("alamat_pt")
+    private String alamat_pt;
+    @SerializedName("no_telp")
+    private String no_telp;
     @SerializedName("foto")
     private String foto;
+    @SerializedName("password")
+    private String password;
     @SerializedName("value")
     private String value;
     @SerializedName("message")
     private String message;
-    @SerializedName("email")
-    private String email;
-    @SerializedName("password")
-    private String password;
-
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
+    @SerializedName("status")
+    private String status;
 
     public String getId() {
         return id;
     }
 
-    public void setId() {
+    public void setId(String id) {
         this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getNama() {
@@ -64,28 +61,12 @@ public class Pengguna {
         this.nama = nama;
     }
 
-    public String getNim() {
-        return nim;
+    public String getIdentitas() {
+        return identitas;
     }
 
-    public void setNim(String nim) {
-        this.nim = nim;
-    }
-
-    public String getTempat_lahir() {
-        return tempat_lahir;
-    }
-
-    public void setTempat_lahir(String tempat_lahir) {
-        this.tempat_lahir = tempat_lahir;
-    }
-
-    public String getTanggal_lahir() {
-        return tanggal_lahir;
-    }
-
-    public void setTanggal_lahir(String tanggal_lahir) {
-        this.tanggal_lahir = tanggal_lahir;
+    public void setIdentitas(String identitas) {
+        this.identitas = identitas;
     }
 
     public String getAlamat() {
@@ -96,20 +77,52 @@ public class Pengguna {
         this.alamat = alamat;
     }
 
-    public String getNama_ibu() {
-        return nama_ibu;
+    public String getEmail() {
+        return email;
     }
 
-    public void setNama_ibu(String nama_ibu) {
-        this.nama_ibu = nama_ibu;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getNik() {
-        return nik;
+    public String getNo_hp() {
+        return no_hp;
     }
 
-    public void setNik(String nik) {
-        this.nik = nik;
+    public void setNo_hp(String no_hp) {
+        this.no_hp = no_hp;
+    }
+
+    public String getProvider() {
+        return provider;
+    }
+
+    public void setProvider(String provider) {
+        this.provider = provider;
+    }
+
+    public String getNama_pt() {
+        return nama_pt;
+    }
+
+    public void setNama_pt(String nama_pt) {
+        this.nama_pt = nama_pt;
+    }
+
+    public String getAlamat_pt() {
+        return alamat_pt;
+    }
+
+    public void setAlamat_pt(String alamat_pt) {
+        this.alamat_pt = alamat_pt;
+    }
+
+    public String getNo_telp() {
+        return no_telp;
+    }
+
+    public void setNo_telp(String no_telp) {
+        this.no_telp = no_telp;
     }
 
     public String getFoto() {
@@ -118,6 +131,14 @@ public class Pengguna {
 
     public void setFoto(String foto) {
         this.foto = foto;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getValue() {
@@ -135,6 +156,15 @@ public class Pengguna {
     public void setMessage(String message) {
         this.message = message;
     }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
 
     public Pengguna() {
     }

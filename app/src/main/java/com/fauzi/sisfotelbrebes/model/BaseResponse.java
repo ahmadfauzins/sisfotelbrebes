@@ -1,8 +1,5 @@
 package com.fauzi.sisfotelbrebes.model;
 
-/**
- * Created by Wim on 11/4/16.
- */
 public class BaseResponse {
 
     private boolean error;

@@ -1,4 +1,4 @@
-package com.fauzi.sisfotelbrebes;
+package com.fauzi.sisfotelbrebes.main;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.fauzi.sisfotelbrebes.R;
 import com.fauzi.sisfotelbrebes.api.FilePath;
 
 import net.gotev.uploadservice.MultipartUploadRequest;
@@ -29,7 +30,7 @@ public class UploadPDF extends AppCompatActivity {
 
     Uri uri;
 
-    public static final String PDF_UPLOAD_HTTP_URL = "http://192.168.38.20/api_sisfotel/upload.php";
+    public static final String PDF_UPLOAD_HTTP_URL = "http://192.168.43.243/api_sisfotel/upload.php";
 
     public int PDF_REQ_CODE = 1;
 

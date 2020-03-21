@@ -74,7 +74,7 @@
                 android:layout_marginTop="10dp"
                 android:textSize="30dp"
                 android:textAlignment="center"
-                android:text="Silahkan Login"
+                android:text="@string/login"
                 android:textColor="@color/endcolor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -93,7 +93,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
                     android:ems="10"
-                    android:hint="@string/username"
+                    android:hint="@string/email"
                     android:fontFamily="@font/nunitoo"
                     android:textColor="@color/teksindex"
                     android:textColorHint="@color/teksmenu"
