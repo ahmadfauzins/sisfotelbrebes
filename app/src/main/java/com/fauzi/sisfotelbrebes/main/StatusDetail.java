@@ -13,7 +13,7 @@ import android.widget.TextView;
 import com.fauzi.sisfotelbrebes.R;
 
 
-public class PengajuanDetail extends AppCompatActivity {
+public class StatusDetail extends AppCompatActivity {
 
 
     TextView mStatus, mKet;
@@ -28,7 +28,7 @@ public class PengajuanDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pengajuan_detail);
+        setContentView(R.layout.activity_status_detail);
 
         mStatus = findViewById(R.id.status);
         mKet= findViewById(R.id.ket);
@@ -56,7 +56,7 @@ public class PengajuanDetail extends AppCompatActivity {
         imKembali.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PengajuanDetail.this, Status.class);
+                Intent intent = new Intent(StatusDetail.this, Status.class);
                 startActivity(intent);
                 finish();
             }

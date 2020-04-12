@@ -31,17 +31,36 @@
     <string name="login">Silahkan Login</string>
     <string name="regis">Registrasi Sukses!</string>
     <string name="sukses">Silahkan Cek E-Mail Anda\n untuk Pemberitahuan Akun anda Sudah Aktif.\n Info Hub. adminkominfotik@brebeskab.go.id </string>
+    <string name="ceksukses">Silahkan Cek Status Pengajuan\n untuk Melihat Data lengkap Menara.\n Info Hub. adminkominfotik@brebeskab.go.id </string>
     <string name="karakter">KARAKTERISTIK</string>
     <string name="titik">TITIK KOORDINAT</string>
     <string name="lama">Lama Sewa</string>
     <string name="pemilik">Pemilik Tanah</string>
-    <string name="berdiri">Tahun Berdiri</string>
+    <string name="berdiri">Tahun Pendirian</string>
     <string name="lanjut">lanjutkan</string>
     <string name="nosurat">No. Surat Permohonan</string>
     <string name="ambilg">Ambil Gambar</string>
     <string name="upload">upload</string>
     <string name="upload1">1. Surat Permohonan Menara</string>
-    <string name="upload2">2. Surat Permohonan Desa</string>
+    <string name="upload2">2. KTP Pemohon</string>
+    <string name="upload3">3. Surat Kuasa / KTP </string>
+    <string name="upload4">4. Surat Pernyataan Sosialisasi</string>
+    <string name="upload5">5. Surat Perjanjian Lahan</string>
+    <string name="upload6">6. Surat Pernyataan Tidak dalam sengketa</string>
+    <string name="upload7">7. Surat Izin tempat Usaha</string>
+    <string name="upload8">8. Surat Rekom Kades</string>
+    <string name="upload9">9. Surat Rekom Camat</string>
+    <string name="upload10">10. Surat Jaminan Tower</string>
+    <string name="upload11">11. Berita Acara Kesepakatan</string>
+    <string name="upload12">12. Surat Persetujuan Keluarga</string>
+    <string name="upload13">13. Surat Pernyataan Akses Jalan</string>
+    <string name="upload14">14. Surat Pernyataan Boleh Bangun</string>
+    <string name="upload15">15. Surat Pernyataan Pemilik tanah/bangunan</string>
+    <string name="upload16">16. Surat Pengembalian atau perpanjangan sewa</string>
+    <string name="upload17">17. KK / KTP Pemilik Tanah</string>
+    <string name="upload18">18. FC Sertfikat Tanah</string>
+    <string name="upload19">19. Pajak PBB</string>
+
     <string name="ketupload1">*Perhatikan ! Selama Mengupload Berkas Tidak Boleh Keluar Aplikasi.\nLanjutkan Hingga Selesai</string>
     <string name="msg_loading">Loading...</string>
     <string name="uploadImages">Ambil Berkas Gambar</string>
@@ -62,6 +81,19 @@
     <string name="lengkap">*Mohon Untuk Dilengkapi Terlebih dahulu sebelum melakukan Pengajuan</string>
     <string name="simpan">SIMPAN</string>
     <string name="cekbok">Saya Setuju dan Bertanggung Jawab pada Data diatas serta Mentaati Peraturan Menara Telekomunikasi Kab.Brebes</string>
+    <string name="nopeng">Nomor Pengajuan</string>
+    <string name="nomor">Nomor</string>
+    <string name="tinggi">Tinggi</string>
+    <string name="tgl">Tanggal Pendirian</string>
+    <string name="operator">Nama Operator</string>
+    <string name="alamatmenara">Alamat Menara</string>
+    <string name="tinggimenara">Tinggi Menara</string>
+
+    <string name="title_activity_coba">Coba</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="cekpengajuan">Berkas Pengajuan Sukses!</string>
+    <string name="btncekpengajuan">Cek Status</string>
 
 
 </resources>

@@ -30,58 +30,33 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class PengajuanBerkas3 extends AppCompatActivity implements View.OnClickListener {
-ImageView imageView;
-Button pickImage, upload;
-ImageButton pickImg;
+public class PengajuanBerkas4 extends AppCompatActivity implements View.OnClickListener {
+    ImageView imageView;
+    Button pickImage, upload;
+    ImageButton pickImg;
 
-private String cameraFilePath;
-public static final String IMAGE_DIRECTORY_NAME = "Android File Upload";
-private static final String TAG = PengajuanBerkas3.class.getSimpleName();
-private static final int REQUEST_TAKE_PHOTO = 0;
-private static final int REQUEST_PICK_PHOTO = 2;
-private Bitmap bitmap;
-private ApiInterface apiInterface;
+    private Bitmap bitmap;
+    private ApiInterface apiInterface;
 
-private String tanggal_lahir, nik, nama_ibu, foto;
-private String mImageFileLocation = "";
-private Uri fileUri;
-
-private static final int CAMERA_PIC_REQUEST = 1111;
-private static final int CAMERA_CAPTURE_IMAGE_REQUEST_CODE = 100;
-public static final int MEDIA_TYPE_IMAGE = 1;
-
-String id_Pengajuan;
+    String id_Pengajuan;
 @Override
 protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
     getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-    setContentView(R.layout.activity_pengajuan_berkas2);
+    setContentView(R.layout.activity_pengajuan_berkas4);
 
     PengajuanModel id = PrefId.getID(this, PrefId.USER_SESSION);
     id_Pengajuan = String.valueOf(id.getData().getId());
 
-    imageView = (ImageView) findViewById(R.id.preview);
-    pickImg = (ImageButton) findViewById(R.id.pickImage);
-    upload = (Button) findViewById(R.id.upload);
+    imageView = findViewById(R.id.preview);
+    pickImg =  findViewById(R.id.pickImage);
+    upload = findViewById(R.id.upload);
 
     pickImg.setOnClickListener(this);
     upload.setOnClickListener(this);
 
-//        pickImage.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                pilihfile();
-//            }
-//        });
-//        upload.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                uploadFile("insert");
-//            }
-//        });
 }
 
 public void onClick(final View v) {
@@ -110,7 +85,7 @@ public void onClick(final View v) {
                     .show();
             break;
         case R.id.upload:
-            uploadFile("insert");
+            uploadFile("srt_perny_sosial");
             break;
     }
 }
@@ -130,11 +105,6 @@ private void captureImage() {
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), 1);
-//        Intent takePictureIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-//        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-//            startActivityForResult(takePictureIntent, 1);
-//        }
-
 }
 
 @Override
@@ -184,17 +154,18 @@ private void uploadFile(String key) {
             String message = response.body().getMessage();
 
             if (value.equals("1")){
-                Intent intent = new Intent(PengajuanBerkas3.this, PengajuanBerkas3.class);
+                Intent intent = new Intent(PengajuanBerkas4.this, PengajuanBerkas5.class);
                 startActivity(intent);
+                finish();
             } else {
-                Toast.makeText(PengajuanBerkas3.this, message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(PengajuanBerkas4.this, message, Toast.LENGTH_SHORT).show();
             }
         }
 
         @Override
         public void onFailure(Call<UploadBerkas> call, Throwable t) {
             progressDialog.dismiss();
-            Toast.makeText(PengajuanBerkas3.this, t.getMessage().toString(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(PengajuanBerkas4.this, t.getMessage().toString(), Toast.LENGTH_SHORT).show();
 
         }
     });

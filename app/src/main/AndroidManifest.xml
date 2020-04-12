@@ -2,11 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.fauzi.sisfotelbrebes">
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the 'MyLocation' functionality.
-    -->
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -30,24 +26,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme1">
-        <activity android:name=".main.Aktivasi" />
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-
-        <activity android:name=".main.MapsActivityMap" />
-        <activity android:name=".uploadBerkas.PengajuanBerkas"/>
-        <activity android:name=".uploadBerkas.PengajuanBerkas2" />
-        <activity android:name=".main.Syarat"/>
-        <activity android:name=".main.UploadPDF" /> <!-- <meta-data -->
+            android:value="@string/google_maps_key" /> <!-- <meta-data -->
         <!-- android:name="com.google.android.geo.API_KEY" -->
         <!-- android:value="AIzaSyDYvEpmsd7quSROdX1Bhd2RExAObhb9B38" /> -->
         <!-- <meta-data -->
@@ -59,19 +40,61 @@
         <!-- <meta-data -->
         <!-- android:name="com.google.android.gms.v2.API_KEY" -->
         <!-- android:value="AIzaSyDYvEpmsd7quSROdX1Bhd2RExAObhb9B38" /> -->
+
+        <activity
+            android:name=".uploadBerkas.Coba"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_coba"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.fauzi.sisfotelbrebes.MainActivity" />
+        </activity>
+        <activity android:name=".main.MapsActivityMap" />
+        <activity android:name=".uploadBerkas.PengajuanBerkas" />
+        <activity android:name=".uploadBerkas.PengajuanBerkas2" />
+        <activity android:name=".uploadBerkas.PengajuanBerkas3" />
+        <activity android:name=".uploadBerkas.PengajuanBerkas4" />
+        <activity android:name=".uploadBerkas.PengajuanBerkas5">
+        </activity>
+        <activity android:name=".uploadBerkas.PengajuanBerkas6" />
+        <activity android:name=".uploadBerkas.PengajuanBerkas7" />
+        <activity android:name=".uploadBerkas.PengajuanBerkas8" />
+        <activity android:name=".uploadBerkas.PengajuanBerkas9" />
+        <activity android:name=".uploadBerkas.PengajuanBerkas10"/>
+        <activity android:name=".uploadBerkas.PengajuanBerkas11" />
+        <activity android:name=".uploadBerkas.PengajuanBerkas12">
+
+        </activity>
+        <activity android:name=".uploadBerkas.PengajuanBerkas13"></activity>
+        <activity android:name=".uploadBerkas.PengajuanBerkas14" />
+        <activity android:name=".uploadBerkas.PengajuanBerkas15" />
+        <activity android:name=".uploadBerkas.PengajuanBerkas16" />
+        <activity android:name=".uploadBerkas.PengajuanBerkas17" />
+        <activity android:name=".uploadBerkas.PengajuanBerkas18" />
+        <activity android:name=".uploadBerkas.PengajuanBerkas19">
+        </activity>
+        <activity android:name=".uploadBerkas.PengajuanBerkasSelesai" />
+        <activity android:name=".main.Syarat" />
+        <activity android:name=".main.UploadPDF" />
         <activity android:name=".main.Maps" />
         <activity android:name=".main.Status" />
         <activity android:name=".main.Cell" />
         <activity android:name=".main.Profil" />
         <activity android:name=".main.Regulasi" />
         <activity android:name=".main.Pengajuan" />
+        <activity android:name=".main.StatusDetail" />
+        <activity android:name=".main.CellDetail" />
+        <activity android:name=".main.Aktivasi" />
         <activity android:name=".Login" />
         <activity android:name=".Register" />
-        <activity android:name=".Splash"> <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity" />
     </application>
 

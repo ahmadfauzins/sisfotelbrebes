@@ -121,7 +121,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void logout() {
-        PrefId.clear(this);
         PrefUtil.clear(this);
         startActivity(new Intent(getBaseContext(),Splash.class));
         finish();

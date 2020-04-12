@@ -31,12 +31,12 @@ public class AdapterCell extends RecyclerView.Adapter<AdapterCell.MyViewHolder> 
         this.mhsFilter = mahasiswa;
         this.context = context;
     }
-//    public AdapterStatus(List<PengajuanModel> mahasiswa, Context context, RecyclerViewClickListener listener) {
-//        this.mahasiswa = mahasiswa;
-//        this.mhsFilter = mahasiswa;
-//        this.context = context;
-//        this.mListener = listener;
-//    }
+    public AdapterCell(List<PengajuanModel> mahasiswa, Context context, RecyclerViewClickListener listener) {
+        this.mahasiswa = mahasiswa;
+        this.mhsFilter = mahasiswa;
+        this.context = context;
+        this.mListener = listener;
+    }
 
 
 

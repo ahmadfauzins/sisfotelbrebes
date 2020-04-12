@@ -5,7 +5,8 @@ public class Config {
 
 //    public static final String BASE_URL = "http://fauproject.epizy.com/AplikasiMahasiswa/";
 //    public static final String BASE_URL = "http://fauproject.000webhostapp.com/AplikasiMahasiswa/";
-    public static final String BASE_URL = "http://192.168.43.243/api_sisfotel/";
+//    public static final String BASE_URL = "http://192.168.43.243/api_sisfotel/";
+    public static final String BASE_URL = "http://192.168.43.160/api_sisfotel/";
 //    public static final String BASE_URL = "http://192.168.137.1/AplikasiMahasiswa/";
 
 

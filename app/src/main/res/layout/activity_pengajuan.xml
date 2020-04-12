@@ -176,7 +176,7 @@
                             android:layout_height="wrap_content"
                             android:ems="10"
                             android:fontFamily="@font/nunitoo"
-                            android:hint="Tinggi Menara"
+                            android:hint="@string/tinggimenara"
                             android:inputType="number"
                             android:textColor="@color/teksindex"
                             android:textColorHint="@color/teksmenu" />
@@ -191,7 +191,7 @@
                             android:layout_height="wrap_content"
                             android:ems="10"
                             android:fontFamily="@font/nunitoo"
-                            android:hint="Alamat Menara"
+                            android:hint="@string/alamatmenara"
                             android:inputType="textMultiLine"
                             android:textColor="@color/teksindex"
                             android:textColorHint="@color/teksmenu" />

@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,8 +19,6 @@ import com.fauzi.sisfotelbrebes.api.ApiClient;
 import com.fauzi.sisfotelbrebes.api.ApiInterface;
 import com.fauzi.sisfotelbrebes.model.PengajuanModel;
 import com.fauzi.sisfotelbrebes.model.User;
-import com.fauzi.sisfotelbrebes.uploadBerkas.PengajuanBerkas2;
-import com.fauzi.sisfotelbrebes.uploadBerkas.UploadBerkas;
 import com.fauzi.sisfotelbrebes.utility.PrefUtil;
 
 import java.util.List;
@@ -36,6 +33,7 @@ public class Status extends AppCompatActivity {
     private RecyclerView.LayoutManager layoutManager;
     private AdapterStatus adapterStatus;
     private List<PengajuanModel> mhsList;
+    AdapterStatus.RecyclerViewClickListener listener;
 
     ImageView imKembali;
     ApiInterface apiInterface;
@@ -71,8 +69,31 @@ public class Status extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
 
+        listener = new AdapterStatus.RecyclerViewClickListener(){
+            @Override
+            public void onRowClick(View view, final int position) {
+
+                Intent intent = new Intent(Status.this, StatusDetail.class);
+                intent.putExtra("id", mhsList.get(position).getId());
+                intent.putExtra("nomor", mhsList.get(position).getNo_surat());
+                intent.putExtra("siteid", mhsList.get(position).getSite_id());
+                intent.putExtra("sitename", mhsList.get(position).getSite_name());
+                intent.putExtra("operator", mhsList.get(position).getOperator());
+                intent.putExtra("alamat", mhsList.get(position).getAlamat());
+                intent.putExtra("ket", mhsList.get(position).getPemilik_tanah());
+                intent.putExtra("status", mhsList.get(position).getStatus());
+                startActivity(intent);
+                finish();
+            }
+
+            @Override
+            public void onLoveClick(View view, int position) {
+
+            }
+        };
 
     }
+
 //    public void getStatusPengajuan() {
 //
 //        String user_id = "2";
@@ -112,7 +133,7 @@ public class Status extends AppCompatActivity {
 
                         mhsList = response.body();
                         Log.i(Status.class.getSimpleName(), response.body().toString());
-                        adapterStatus = new AdapterStatus(mhsList, Status.this);
+                        adapterStatus = new AdapterStatus(mhsList, Status.this,listener);
                         recyclerView.setAdapter(adapterStatus);
                         adapterStatus.notifyDataSetChanged();
 

@@ -8,7 +8,7 @@ public class PengajuanModel {
 
 
     @SerializedName("id")
-    private String id;
+    private int id;
     @SerializedName("user_id")
     private String user_id;
     @SerializedName("no_surat")
@@ -16,7 +16,7 @@ public class PengajuanModel {
     @SerializedName("operator")
     private String operator;
     @SerializedName("site_id")
-    private String iste_id;
+    private String site_id;
     @SerializedName("site_name")
     private String site_name;
     @SerializedName("tinggi")
@@ -46,35 +46,39 @@ public class PengajuanModel {
     @SerializedName("message")
     private String message;
 
-    public String getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 
-    public String getIs_approved() {
+
+
+    @SerializedName("status")
+    private int status;
+
+    public int getIs_approved() {
         return is_approved;
     }
 
-    public void setIs_approved(String is_approved) {
+    public void setIs_approved(int is_approved) {
         this.is_approved = is_approved;
     }
 
-    @SerializedName("status")
-    private String status;
     @SerializedName("is_approved")
-    private String is_approved;
+    private int is_approved;
 
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
+
 
     public String getNo_surat() {
         return no_surat;
@@ -92,12 +96,12 @@ public class PengajuanModel {
         this.operator = operator;
     }
 
-    public String getIste_id() {
-        return iste_id;
+    public String getSite_id() {
+        return site_id;
     }
 
-    public void setIste_id(String iste_id) {
-        this.iste_id = iste_id;
+    public void setSite_id(String site_id) {
+        this.site_id = site_id;
     }
 
     public String getSite_name() {

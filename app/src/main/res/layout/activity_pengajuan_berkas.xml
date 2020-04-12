@@ -13,7 +13,7 @@
 
         <View
             android:background="@drawable/baw"
-            android:layout_width="400dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent">
 
         </View>
@@ -21,87 +21,32 @@
 
         <View
             android:background="@drawable/pro"
-            android:layout_width="40dp"
+            android:layout_width="20dp"
             android:layout_height="match_parent">
         </View>
 
 
 
     </RelativeLayout>
-<androidx.core.widget.NestedScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".uploadBerkas.PengajuanBerkas">
-
-    <RelativeLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".uploadBerkas.PengajuanBerkas">
 
-        <TextView
-            android:id="@+id/satu"
-            android:textColor="@color/startcolor"
-            android:gravity="center"
-            android:layout_marginTop="10dp"
-            android:textSize="20dp"
-            android:fontFamily="@font/nunito"
-            android:textStyle="bold"
-            android:text="@string/upload1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-
-        </TextView>
-
-
-        <LinearLayout
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_margin="30dp"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageButton
-                android:src="@drawable/ic_camera_alt_black_24dp"
-                android:onClick="onClick"
-                android:layout_marginTop="20dp"
-                android:id="@+id/pickImage"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/btn_background"
-                android:fontFamily="@font/nunito"
-                android:textColor="@color/colorWhite"
-                android:textSize="20dp" />
-
-            <ImageView
-                android:layout_marginTop="10dp"
-                android:id="@+id/preview"
-                android:layout_width="300dp"
-                android:layout_height="350dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_crop_original_black_24dp" />
-
-
-            <Button
-                android:drawableLeft="@drawable/ic_file_upload_black_24dp"
-                android:onClick="onClick"
-                android:layout_marginTop="10dp"
-                android:id="@+id/upload"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/btn_background"
-                android:fontFamily="@font/nunito"
-                android:text="@string/upload"
-                android:textColor="@color/colorWhite"
-                android:textSize="20dp" />
-
             <TextView
+                android:id="@+id/satu"
+                android:textColor="@color/startcolor"
                 android:gravity="center"
                 android:layout_marginTop="10dp"
-                android:textSize="14dp"
+                android:textSize="20dp"
                 android:fontFamily="@font/nunito"
                 android:textStyle="bold"
-                android:hint="@string/ketupload1"
+                android:text="@string/upload1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 >
@@ -109,10 +54,65 @@
             </TextView>
 
 
-        </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_margin="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    </RelativeLayout>
+                <ImageButton
+                    android:src="@drawable/ic_camera_alt_black_24dp"
+                    android:onClick="onClick"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/pickImage"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_background"
+                    android:fontFamily="@font/nunito"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp" />
 
-</androidx.core.widget.NestedScrollView>
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/preview"
+                    android:layout_width="300dp"
+                    android:layout_height="350dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_crop_original_black_24dp" />
+
+
+                <Button
+                    android:drawableLeft="@drawable/ic_file_upload_black_24dp"
+                    android:onClick="onClick"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/upload"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_background"
+                    android:fontFamily="@font/nunito"
+                    android:text="@string/upload"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/nunito"
+                    android:textStyle="bold"
+                    android:hint="@string/ketupload1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                </TextView>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

@@ -298,6 +298,7 @@
                             android:fontFamily="@font/nunitoo"
                             android:hint="Keterangan Belum di Upload"
                             android:textColor="@color/teksindex"
+                            android:gravity="center"
                             android:textSize="18dp" />
 
                     </LinearLayout>

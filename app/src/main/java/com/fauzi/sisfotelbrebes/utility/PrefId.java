@@ -45,8 +45,8 @@ public class PrefId {
         return getSharedPreference(context).getString(key, null);
     }
 
-    public static void clear(Context context) {
-        getSharedPreference(context).edit().clear().apply();
+    public static void clear(Context context , String key, String value) {
+        getSharedPreference(context).edit().putString(key, value).apply();
     }
 
 }

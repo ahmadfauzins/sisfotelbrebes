@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".uploadBerkas.PengajuanBerkas5">
+    tools:context=".uploadBerkas.PengajuanBerkas6">
 
     <RelativeLayout
         android:layout_marginTop="20dp"
@@ -13,7 +13,7 @@
 
         <View
             android:background="@drawable/baw"
-            android:layout_width="400dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent">
 
         </View>
@@ -21,7 +21,7 @@
 
         <View
             android:background="@drawable/pro"
-            android:layout_width="120dp"
+            android:layout_width="135dp"
             android:layout_height="match_parent">
         </View>
 
@@ -32,20 +32,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".uploadBerkas.PengajuanBerkas5">
+        tools:context=".uploadBerkas.PengajuanBerkas6">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/judul"
                 android:textColor="@color/startcolor"
                 android:gravity="center"
                 android:layout_marginTop="10dp"
                 android:textSize="20dp"
                 android:fontFamily="@font/nunito"
                 android:textStyle="bold"
-                android:text="@string/upload5"
+                android:text="@string/upload6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 >
@@ -53,9 +54,9 @@
             </TextView>
 
             <LinearLayout
+                android:layout_below="@+id/judul"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:layout_margin="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 

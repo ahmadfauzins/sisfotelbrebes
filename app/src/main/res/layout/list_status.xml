@@ -83,21 +83,21 @@
 
 
             <TextView
-                android:fontFamily="@font/nunitoo"
                 android:id="@+id/manfaat"
-                android:layout_width="267dp"
+                android:layout_width="412dp"
                 android:layout_height="43dp"
                 android:layout_marginLeft="110dp"
                 android:layout_marginTop="50dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/nunitoo"
                 android:text="Manfaat"
                 android:textSize="15sp" />
             <TextView
                 android:fontFamily="@font/nunitoo"
                 android:id="@+id/type"
-                android:layout_width="267dp"
+                android:layout_width="match_parent"
                 android:layout_height="43dp"
-                android:layout_marginLeft="110dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="50dp"
                 android:layout_weight="1"
                 android:text="Manfaat"

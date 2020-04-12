@@ -30,7 +30,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class PengajuanBerkas13 extends AppCompatActivity implements View.OnClickListener {
+public class PengajuanBerkas14 extends AppCompatActivity implements View.OnClickListener {
     ImageView imageView;
     Button pickImage, upload;
     ImageButton pickImg;
@@ -45,7 +45,7 @@ public class PengajuanBerkas13 extends AppCompatActivity implements View.OnClick
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        setContentView(R.layout.activity_pengajuan_berkas10);
+        setContentView(R.layout.activity_pengajuan_berkas14);
 
         PengajuanModel id = PrefId.getID(this, PrefId.USER_SESSION);
         id_Pengajuan = String.valueOf(id.getData().getId());
@@ -85,7 +85,7 @@ public class PengajuanBerkas13 extends AppCompatActivity implements View.OnClick
                         .show();
                 break;
             case R.id.upload:
-                uploadFile("srt_jmn_tower");
+                uploadFile("srt_perny_pembangunan");
                 break;
         }
     }
@@ -159,17 +159,18 @@ public class PengajuanBerkas13 extends AppCompatActivity implements View.OnClick
                 String message = response.body().getMessage();
 
                 if (value.equals("1")){
-                    Intent intent = new Intent(PengajuanBerkas13.this, PengajuanBerkas13.class);
+                    Intent intent = new Intent(PengajuanBerkas14.this, PengajuanBerkas15.class);
                     startActivity(intent);
+                    finish();
                 } else {
-                    Toast.makeText(PengajuanBerkas13.this, message, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PengajuanBerkas14.this, message, Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<UploadBerkas> call, Throwable t) {
                 progressDialog.dismiss();
-                Toast.makeText(PengajuanBerkas13.this, t.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(PengajuanBerkas14.this, t.getMessage().toString(), Toast.LENGTH_SHORT).show();
 
             }
         });

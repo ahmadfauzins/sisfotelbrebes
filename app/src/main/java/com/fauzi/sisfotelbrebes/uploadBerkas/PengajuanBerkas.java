@@ -67,7 +67,7 @@ public class PengajuanBerkas extends AppCompatActivity implements View.OnClickLi
 
         satu = (TextView) findViewById(R.id.satu);
         PengajuanModel id = PrefId.getID(this, PrefId.USER_SESSION);
-        id_Pengajuan = (id.getData().getId());
+        id_Pengajuan = String.valueOf(id.getData().getId());
 
 
         imageView = (ImageView) findViewById(R.id.preview);
@@ -192,6 +192,7 @@ public class PengajuanBerkas extends AppCompatActivity implements View.OnClickLi
                 if (value.equals("1")){
                     Intent intent = new Intent(PengajuanBerkas.this, PengajuanBerkas2.class);
                     startActivity(intent);
+                    finish();
                 } else {
                     Toast.makeText(PengajuanBerkas.this, message, Toast.LENGTH_SHORT).show();
                 }

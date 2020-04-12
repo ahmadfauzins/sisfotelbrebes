@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_top"
-    tools:context=".main.Aktivasi">
+    tools:context=".uploadBerkas.PengajuanBerkasSelesai">
 
 
     <RelativeLayout
@@ -29,7 +29,7 @@
                 android:textColor="#ffffff"
                 android:textSize="30dp"
                 android:fontFamily="@font/nunitoo"
-                android:text="@string/welcome"
+                android:text="@string/app_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <TextView
@@ -66,15 +66,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="400dp">
 
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:fontFamily="@font/nunitoo"
                 android:layout_marginTop="10dp"
-                android:textSize="30dp"
+                android:textSize="26dp"
                 android:textAlignment="center"
-                android:text="@string/regis"
+                android:text="@string/cekpengajuan"
                 android:textColor="@color/endcolor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -97,7 +96,7 @@
                     android:gravity="center"
                     android:layout_gravity="center"
                     android:fontFamily="@font/nunitoo"
-                    android:hint="@string/sukses"
+                    android:hint="@string/ceksukses"
                     android:inputType="textPassword"
                     android:padding="@dimen/activity_vertical_margin"
                     android:textColor="@color/teksindex"
@@ -110,34 +109,9 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/btn_background"
                     android:fontFamily="@font/nunito"
-                    android:text="Cek Email"
+                    android:text="@string/btncekpengajuan"
                     android:textColor="@color/colorWhite"
                     android:textSize="20dp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/sudah"
-                        android:textAlignment="center"
-                        android:textSize="14dp" />
-
-                    <TextView
-                        android:layout_marginLeft="10dp"
-                        android:id="@+id/tv_Login"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/nunito"
-                        android:text="Login"
-                        android:textAlignment="center"
-                        android:textSize="14dp" />
-                </LinearLayout>
 
             </LinearLayout>
 

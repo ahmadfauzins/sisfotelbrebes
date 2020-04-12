@@ -7,7 +7,7 @@ public class ApiClient {
 
 //    private static final String BASE_URL = "http://fauproject.000webhostapp.com/AplikasiMahasiswa/android/";
 //    private static final String BASE_URL = "http://192.168.38.27/api_sisfotel/";
-    private static final String BASE_URL = "http://192.168.43.243/api_sisfotel/";
+    private static final String BASE_URL = "http://192.168.43.160/api_sisfotel/";
 //    private static final String BASE_URL = "http://192.168.137.1/AplikasiMahasiswa/android/";
 
     private static Retrofit retrofit;

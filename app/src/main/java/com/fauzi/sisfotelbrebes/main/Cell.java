@@ -33,6 +33,7 @@ public class Cell extends AppCompatActivity {
     private RecyclerView.LayoutManager layoutManager;
     private AdapterStatus adapterStatus;
     private List<PengajuanModel> mhsList;
+    AdapterStatus.RecyclerViewClickListener listener;
 
     ImageView imKembali;
     ApiInterface apiInterface;
@@ -66,6 +67,33 @@ public class Cell extends AppCompatActivity {
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+
+        listener = new AdapterStatus.RecyclerViewClickListener(){
+            @Override
+            public void onRowClick(View view, final int position) {
+
+                Intent intent = new Intent(Cell.this, CellDetail.class);
+                intent.putExtra("id", mhsList.get(position).getId());
+                intent.putExtra("siteid", mhsList.get(position).getSite_id());
+                intent.putExtra("sitename", mhsList.get(position).getSite_name());
+                intent.putExtra("operator", mhsList.get(position).getOperator());
+                intent.putExtra("alamat", mhsList.get(position).getAlamat());
+                intent.putExtra("status", mhsList.get(position).getIs_approved());
+                intent.putExtra("tinggi", mhsList.get(position).getTinggi());
+                intent.putExtra("tahun", mhsList.get(position).getBerdiri());
+                intent.putExtra("lama", mhsList.get(position).getLama_sewa());
+                intent.putExtra("pemilik", mhsList.get(position).getPemilik_tanah());
+                intent.putExtra("lat", mhsList.get(position).getLat());
+                intent.putExtra("ling", mhsList.get(position).getLing());
+                startActivity(intent);
+                finish();
+            }
+
+            @Override
+            public void onLoveClick(View view, int position) {
+
+            }
+        };
 
 
 
@@ -108,7 +136,7 @@ public class Cell extends AppCompatActivity {
 
                         mhsList = response.body();
                         Log.i(Cell.class.getSimpleName(), response.body().toString());
-                        adapterStatus = new AdapterStatus(mhsList, Cell.this);
+                        adapterStatus = new AdapterStatus(mhsList, Cell.this,listener);
                         recyclerView.setAdapter(adapterStatus);
                         adapterStatus.notifyDataSetChanged();
 

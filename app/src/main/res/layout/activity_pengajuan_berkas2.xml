@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".uploadBerkas.PengajuanBerkas">
+    tools:context=".uploadBerkas.PengajuanBerkas2">
 
     <RelativeLayout
         android:layout_marginTop="20dp"
@@ -12,9 +12,9 @@
         android:layout_height="30dp">
 
         <View
-            android:background="@drawable/baw"
             android:layout_width="400dp"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/baw">
 
         </View>
 
@@ -32,7 +32,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".uploadBerkas.PengajuanBerkas">
+    tools:context=".uploadBerkas.PengajuanBerkas2">
 
     <RelativeLayout
         android:layout_width="match_parent"

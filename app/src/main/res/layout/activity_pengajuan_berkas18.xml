@@ -21,7 +21,7 @@
 
         <View
             android:background="@drawable/pro"
-            android:layout_width="190dp"
+            android:layout_width="350dp"
             android:layout_height="match_parent">
         </View>
 
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".uploadBerkas.PengajuanBerkas10">
+        tools:context=".uploadBerkas.PengajuanBerkas18">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -45,7 +45,7 @@
                 android:textSize="20dp"
                 android:fontFamily="@font/nunito"
                 android:textStyle="bold"
-                android:text="@string/upload10"
+                android:text="@string/upload18"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 >

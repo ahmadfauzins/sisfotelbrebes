@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".uploadBerkas.PengajuanBerkas10">
+    tools:context=".uploadBerkas.PengajuanBerkas15">
 
     <RelativeLayout
         android:layout_marginTop="20dp"
@@ -21,7 +21,7 @@
 
         <View
             android:background="@drawable/pro"
-            android:layout_width="190dp"
+            android:layout_width="280dp"
             android:layout_height="match_parent">
         </View>
 
@@ -31,7 +31,6 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:tools="http://schemas.android.com/tools"
         tools:context=".uploadBerkas.PengajuanBerkas10">
 
         <RelativeLayout
@@ -39,13 +38,14 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/judul"
                 android:textColor="@color/startcolor"
                 android:gravity="center"
                 android:layout_marginTop="10dp"
                 android:textSize="20dp"
                 android:fontFamily="@font/nunito"
                 android:textStyle="bold"
-                android:text="@string/upload10"
+                android:text="@string/upload15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 >
@@ -53,56 +53,60 @@
             </TextView>
 
             <LinearLayout
-                android:gravity="center"
-                android:orientation="vertical"
-                android:layout_margin="30dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_below="@+id/judul"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageButton
-                    android:src="@drawable/ic_camera_alt_black_24dp"
-                    android:onClick="onClick"
-                    android:layout_marginTop="20dp"
                     android:id="@+id/pickImage"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/btn_background"
                     android:fontFamily="@font/nunito"
+                    android:onClick="onClick"
+                    android:src="@drawable/ic_camera_alt_black_24dp"
                     android:textColor="@color/colorWhite"
                     android:textSize="20dp" />
 
                 <ImageView
-                    android:layout_marginTop="10dp"
                     android:id="@+id/preview"
                     android:layout_width="300dp"
                     android:layout_height="350dp"
+                    android:layout_marginTop="10dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/ic_crop_original_black_24dp" />
 
 
                 <Button
-                    android:drawableLeft="@drawable/ic_file_upload_black_24dp"
-                    android:onClick="onClick"
-                    android:layout_marginTop="10dp"
                     android:id="@+id/upload"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/btn_background"
+                    android:drawableLeft="@drawable/ic_file_upload_black_24dp"
                     android:fontFamily="@font/nunito"
+                    android:onClick="onClick"
                     android:text="@string/upload"
                     android:textColor="@color/colorWhite"
                     android:textSize="20dp" />
 
                 <TextView
-                    android:gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:textSize="14dp"
-                    android:fontFamily="@font/nunito"
-                    android:textStyle="bold"
-                    android:hint="@string/ketupload1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    >
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito"
+                    android:gravity="center"
+                    android:hint="@string/ketupload1"
+                    android:textSize="14dp"
+                    android:textStyle="bold">
 
                 </TextView>
 

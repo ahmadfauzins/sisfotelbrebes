@@ -65,6 +65,21 @@ public interface ApiInterface {
             @Field("user_id") String user_id);
 
     @FormUrlEncoded
+    @POST("update_user.php")
+    Call<Pengguna>updateUser(
+            @Field("key")String key,
+            @Field("id")int id,
+            @Field("username")String username,
+            @Field("nama")String nama,
+            @Field("identitas")String identitas,
+            @Field("alamat")String alamat,
+            @Field("email")String email,
+            @Field("no_hp")String no_hp,
+            @Field("namapem")String namapem,
+            @Field("alamatpem")String alamatpem,
+            @Field("no_telp")String no_telp);
+
+    @FormUrlEncoded
     @POST("get_cell.php")
     Call<List<PengajuanModel>> getCellular(
             @Field("user_id") String user_id);
@@ -83,8 +98,8 @@ public interface ApiInterface {
             @Field("foto") String foto);
 
     @FormUrlEncoded
-    @POST("uploadberkas2.php")
-    Call<UploadBerkas> UploadData2(
+    @POST("uploadberkasall.php")
+    Call<UploadBerkas> UploadDataAll(
             @Field("key") String key,
             @Field("kode") String kode,
             @Field("foto") String foto);

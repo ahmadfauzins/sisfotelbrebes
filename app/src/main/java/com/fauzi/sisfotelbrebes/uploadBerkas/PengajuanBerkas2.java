@@ -61,7 +61,7 @@ protected void onCreate(Bundle savedInstanceState) {
     setContentView(R.layout.activity_pengajuan_berkas2);
 
     PengajuanModel id = PrefId.getID(this, PrefId.USER_SESSION);
-    id_Pengajuan = (id.getData().getId());
+    id_Pengajuan = String.valueOf(id.getData().getId());
 
     imageView = (ImageView) findViewById(R.id.preview);
     pickImg = (ImageButton) findViewById(R.id.pickImage);
@@ -110,7 +110,7 @@ public void onClick(final View v) {
                     .show();
             break;
         case R.id.upload:
-            uploadFile("insert");
+            uploadFile("ktp_pemohon");
             break;
     }
 }
@@ -173,7 +173,7 @@ private void uploadFile(String key) {
     //Memanggil Api Interface nya dan Api Client nya (BASE URL nya)
     apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
     //masukan parameternya
-    Call<UploadBerkas> call = apiInterface.UploadData2(key, id_Pengajuan, picture);
+    Call<UploadBerkas> call = apiInterface.UploadDataAll(key, id_Pengajuan, picture);
     //masukan dalam enqueue (antrian)
     call.enqueue(new Callback<UploadBerkas>() {
         @Override
@@ -184,8 +184,9 @@ private void uploadFile(String key) {
             String message = response.body().getMessage();
 
             if (value.equals("1")){
-                Intent intent = new Intent(PengajuanBerkas2.this, PengajuanBerkas2.class);
+                Intent intent = new Intent(PengajuanBerkas2.this, PengajuanBerkas3.class);
                 startActivity(intent);
+                finish();
             } else {
                 Toast.makeText(PengajuanBerkas2.this, message, Toast.LENGTH_SHORT).show();
             }

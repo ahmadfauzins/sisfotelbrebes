@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -31,12 +32,13 @@ public class AdapterStatus extends RecyclerView.Adapter<AdapterStatus.MyViewHold
         this.mhsFilter = mahasiswa;
         this.context = context;
     }
-//    public AdapterStatus(List<PengajuanModel> mahasiswa, Context context, RecyclerViewClickListener listener) {
-//        this.mahasiswa = mahasiswa;
-//        this.mhsFilter = mahasiswa;
-//        this.context = context;
-//        this.mListener = listener;
-//    }
+
+    public AdapterStatus(List<PengajuanModel> mahasiswa, Context context, RecyclerViewClickListener listener) {
+        this.mahasiswa = mahasiswa;
+        this.mhsFilter = mahasiswa;
+        this.context = context;
+        this.mListener = listener;
+    }
 
 
 
@@ -51,9 +53,9 @@ public class AdapterStatus extends RecyclerView.Adapter<AdapterStatus.MyViewHold
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
 
-        holder.mName.setText(mahasiswa.get(position).getSite_name());
-        holder.mType.setText(mahasiswa.get(position).getAlamat());
-        holder.mDate.setText(mahasiswa.get(position).getStatus());
+        holder.mmsitename.setText(mahasiswa.get(position).getSite_name());
+        holder.mmsiteid.setText(mahasiswa.get(position).getOperator());
+        holder.mStatus.setText(mahasiswa.get(position).getSite_id());
 
         RequestOptions requestOptions = new RequestOptions();
         requestOptions.skipMemoryCache(true);
@@ -66,14 +68,6 @@ public class AdapterStatus extends RecyclerView.Adapter<AdapterStatus.MyViewHold
                 .apply(requestOptions)
                 .into(holder.mPicture);
 
-//        final Boolean love = pets.get(position).getLove();
-//
-//        if (love){
-//            holder.mLove.setImageResource(R.drawable.likeon);
-//        } else {
-//            holder.mLove.setImageResource(R.drawable.likeof);
-//        }
-
     }
 
     @Override
@@ -81,35 +75,26 @@ public class AdapterStatus extends RecyclerView.Adapter<AdapterStatus.MyViewHold
         return mahasiswa.size();
     }
 
-//    @Override
-//    public Filter getFilter() {
-//        if (filter==null) {
-//            filter=new CustomFilter((ArrayList<PengajuanModel>) mhsFilter,this);
-//
-//        }
-//        return filter;
-//    }
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private RecyclerViewClickListener mListener;
         private CircleImageView mPicture;
-//        private ImageView mLove;
-        private TextView mName, mType, mDate;
+
+        private TextView mKet , mStatus , mmsitename,mmsiteid;
+
         private RelativeLayout mRowContainer;
 
         public MyViewHolder(View itemView, RecyclerViewClickListener listener) {
             super(itemView);
+            mmsitename = itemView.findViewById(R.id.name);
+            mmsiteid= itemView.findViewById(R.id.manfaat);
             mPicture = itemView.findViewById(R.id.imgBuah);
-            mName = itemView.findViewById(R.id.name);
-            mType = itemView.findViewById(R.id.manfaat);
-//            mLove = itemView.findViewById(R.id.love);
-            mDate = itemView.findViewById(R.id.type);
+            mStatus = itemView.findViewById(R.id.type);
             mRowContainer = itemView.findViewById(R.id.row_container);
 
             mListener = listener;
             mRowContainer.setOnClickListener(this);
-//            mLove.setOnClickListener(this);
         }
 
         @Override

@@ -13,7 +13,7 @@
 
         <View
             android:background="@drawable/baw"
-            android:layout_width="400dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent">
 
         </View>
@@ -21,7 +21,7 @@
 
         <View
             android:background="@drawable/pro"
-            android:layout_width="80dp"
+            android:layout_width="100dp"
             android:layout_height="match_parent">
         </View>
 
@@ -45,7 +45,7 @@
             android:textSize="20dp"
             android:fontFamily="@font/nunito"
             android:textStyle="bold"
-            android:text="@string/upload3"
+            android:text="@string/upload4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >

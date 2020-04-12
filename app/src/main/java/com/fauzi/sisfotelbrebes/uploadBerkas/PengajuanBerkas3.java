@@ -30,26 +30,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class PengajuanBerkas2 extends AppCompatActivity implements View.OnClickListener {
+public class PengajuanBerkas3 extends AppCompatActivity implements View.OnClickListener {
 ImageView imageView;
 Button pickImage, upload;
 ImageButton pickImg;
 
-private String cameraFilePath;
-public static final String IMAGE_DIRECTORY_NAME = "Android File Upload";
-private static final String TAG = PengajuanBerkas2.class.getSimpleName();
-private static final int REQUEST_TAKE_PHOTO = 0;
-private static final int REQUEST_PICK_PHOTO = 2;
 private Bitmap bitmap;
 private ApiInterface apiInterface;
-
-private String tanggal_lahir, nik, nama_ibu, foto;
-private String mImageFileLocation = "";
-private Uri fileUri;
-
-private static final int CAMERA_PIC_REQUEST = 1111;
-private static final int CAMERA_CAPTURE_IMAGE_REQUEST_CODE = 100;
-public static final int MEDIA_TYPE_IMAGE = 1;
 
 String id_Pengajuan;
 @Override
@@ -58,7 +45,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
     getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-    setContentView(R.layout.activity_pengajuan_berkas2);
+    setContentView(R.layout.activity_pengajuan_berkas3);
 
     PengajuanModel id = PrefId.getID(this, PrefId.USER_SESSION);
     id_Pengajuan = String.valueOf(id.getData().getId());
@@ -110,7 +97,7 @@ public void onClick(final View v) {
                     .show();
             break;
         case R.id.upload:
-            uploadFile("insert");
+            uploadFile("srt_kuasa");
             break;
     }
 }
@@ -173,7 +160,7 @@ private void uploadFile(String key) {
     //Memanggil Api Interface nya dan Api Client nya (BASE URL nya)
     apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
     //masukan parameternya
-    Call<UploadBerkas> call = apiInterface.UploadData2(key, id_Pengajuan, picture);
+    Call<UploadBerkas> call = apiInterface.UploadDataAll(key, id_Pengajuan, picture);
     //masukan dalam enqueue (antrian)
     call.enqueue(new Callback<UploadBerkas>() {
         @Override
@@ -184,17 +171,18 @@ private void uploadFile(String key) {
             String message = response.body().getMessage();
 
             if (value.equals("1")){
-                Intent intent = new Intent(PengajuanBerkas2.this, PengajuanBerkas2.class);
+                Intent intent = new Intent(PengajuanBerkas3.this, PengajuanBerkas4.class);
                 startActivity(intent);
+                finish();
             } else {
-                Toast.makeText(PengajuanBerkas2.this, message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(PengajuanBerkas3.this, message, Toast.LENGTH_SHORT).show();
             }
         }
 
         @Override
         public void onFailure(Call<UploadBerkas> call, Throwable t) {
             progressDialog.dismiss();
-            Toast.makeText(PengajuanBerkas2.this, t.getMessage().toString(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(PengajuanBerkas3.this, t.getMessage().toString(), Toast.LENGTH_SHORT).show();
 
         }
     });
